@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MarvelApplication</string>
+    <string name="public_key">48d2901781db31818938d1517c19700b</string>
+    <string name="private_key">435e550bd1e38ea6b922a2ae784a200caeb4613f</string>
 </resources>

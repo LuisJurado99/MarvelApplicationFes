@@ -1,11 +1,15 @@
 package developer.unam.marvelapplication.utils
 
+import android.app.Activity
+import android.util.Log
+import developer.unam.marvelapplication.R
 import java.lang.StringBuilder
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
+import java.sql.Timestamp
 
 
-class MdCreate {
+class MdCreate(private val activity: Activity) {
     fun createMd5(message: String): String {
         val MD5 = "MD5"
         try {
@@ -25,5 +29,18 @@ class MdCreate {
             e.printStackTrace()
         }
         return ""
+    }
+
+    fun addParams():Map<String,String>{
+        val private = activity.getString(R.string.private_key)
+        val public = activity.getString(R.string.public_key)
+        val ts = Timestamp(System.currentTimeMillis())
+
+        val map = hashMapOf<String,String>()
+        map["apikey"] = public
+        map["ts"] = ts.toString()
+        map["hash"] = createMd5("$ts$private$public")
+        Log.e("params", "params $map")
+        return  map
     }
 }
