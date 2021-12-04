@@ -2,4 +2,14 @@
     <string name="app_name">MarvelApplication</string>
     <string name="public_key">48d2901781db31818938d1517c19700b</string>
     <string name="private_key">435e550bd1e38ea6b922a2ae784a200caeb4613f</string>
+    <string name="username">UserName</string>
+    <string name="login">Login</string>
+    <string name="passwor">Password</string>
+    <string name="credentials_not">Credenciales no validas</string>
+    <string name="not_empty">No debe ir vacio</string>
+    <string name="format_email">No es un formato de email valido</string>
+    <string name="menor_length">Menor a 6 caracteres</string>
+    <string name="error_generic">No disponible intentalo mas tarde</string>
+    <string name="registro">Registro</string>
+
 </resources>

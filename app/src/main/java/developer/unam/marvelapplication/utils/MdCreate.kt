@@ -31,7 +31,7 @@ class MdCreate(private val activity: Activity) {
         return ""
     }
 
-    fun addParams():Map<String,String>{
+    fun addParams():HashMap<String,String>{
         val private = activity.getString(R.string.private_key)
         val public = activity.getString(R.string.public_key)
         val ts = Timestamp(System.currentTimeMillis())
