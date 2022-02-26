@@ -43,6 +43,9 @@ class OAuthActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        binding.btnRegistroOAuht.setOnClickListener {
+            startActivity(Intent(this,RegisterActivity::class.java))
+        }
 
         binding.btnSignGoogleOAuth.setOnClickListener {
 
